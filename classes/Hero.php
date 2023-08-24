@@ -72,9 +72,8 @@ class Hero {
 
     public function hit(Monster $monster) {
 
-        $damage = rand(0,20); // Dégats aléatoires
-        $monsterHealthPoint = $monster->getMonsterHP(); // Récupération des HP du monstre
-        $monster->setMonsterHP($monsterHealthPoint - $damage); // Retrait des dégats
+         $damage = rand(0,20); // Dégats aléatoires
+        $monster->setMonsterHP($monster->getMonsterHP() - $damage); // Retrait des dégats
 
         return $damage;
 
