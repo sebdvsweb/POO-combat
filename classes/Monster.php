@@ -35,8 +35,7 @@ class Monster {
     public function hit(Hero $hero) {
 
         $damage = rand(0,20);
-        $heroHealthPoint = $hero->getHeroHP();
-        $hero->setHeroHP($heroHealthPoint - $damage);
+        $hero->setHeroHP($hero->getHeroHP() - $damage);
 
         return $damage;
     }
