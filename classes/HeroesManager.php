@@ -77,10 +77,7 @@ class HeroesManager {
        }
 
        // Création d'une nouvelle instance de Hero avec les données récupérées du tableau
-       $hero = new Hero(['name', 'healthPoint']);
-       $hero->setHeroId($data['id']);
-       $hero->setHeroName($data['name']);
-       $hero->setHeroHP($data['health_point']);
+       $hero = new Hero($data);
 
        return $hero; // le combattant à venir !
     
